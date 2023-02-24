@@ -154,7 +154,7 @@ export const StyledCalendar = styled(DatePicker)`
  }
 `
 
-export const StyledButtonDate = styled(Button)`
+export const StyledButtonDate = styled.button`
   background: white;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   padding: 0.75rem;
@@ -220,7 +220,7 @@ export const TaskForm = () => {
             }}
             render={(value: any, openCalendar: any,) => {
               return (
-                <StyledButtonDate placeholder={moment(new Date()).format("DD/MM/YYYY")} onClick={openCalendar}>
+                <StyledButtonDate type='button' placeholder={moment(new Date()).format("DD/MM/YYYY")} onClick={openCalendar}>
                   {value}
                 </StyledButtonDate>
               )
