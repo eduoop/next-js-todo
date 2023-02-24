@@ -1,4 +1,5 @@
 import { Menu } from '@/components/Menu'
+import { TodoProvider } from '@/contexts/todo/TodoProvider'
 import './globals.css'
 
 export default function RootLayout({
@@ -14,8 +15,10 @@ export default function RootLayout({
       */}
       <head />
       <body>
-        <Menu/>
-        {children}
+        <Menu />
+        <TodoProvider>
+          {children}
+        </TodoProvider>
       </body>
     </html>
   )
